@@ -1,6 +1,7 @@
-#global_costmap:
-global_frame: /map
-robot_base_frame: base_link
-update_frequency: 5.0
-static_map: false
-
+global_costmap:
+  global_frame: /map
+  track_unknow_space: true
+  robot_base_frame: base_link
+  update_frequency: 5.0
+  static_map: true
+  transform tolerance: 7.0
