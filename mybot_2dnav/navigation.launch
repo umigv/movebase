@@ -1,4 +1,0 @@
-<launch>
-	<include file = "$(find mybot_2dnav)/my_robot_configuration.launch"/>
-	<include file = "$(find mybot_2dnav)/move_base.launch"/>
-</launch>
