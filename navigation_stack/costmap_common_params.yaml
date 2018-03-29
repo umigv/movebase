@@ -1,0 +1,11 @@
+obstacle_range: 2.5
+raytrace_range: 3.0
+footprint: [[-0.2, 0.2], [0.2, 0.2], [0.2, -0.2], [-0.2, -0.2]]
+#robot_radius: 
+inflation_radius: 0.55
+
+observation_sources: gazebo 
+
+gazebo: {sensor_frame: hokuyo, data_type: LaserScan, topic: mybot/laser/scan, marking: true, clearing: true}
+
+
