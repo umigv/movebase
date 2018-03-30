@@ -1,29 +1,6 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- Run the map server -->
-  <!--node name="map_node" pkg="map_server" type="map_server" args="$(find map_pkg)/map.pgm 0.05"/-->
-
-  <!--- Run AMCL -->
-  <!--include file="$(find amcl)/examples/amcl_omni.launch" /-->
-
-  <!--- Run gmapping -->
-  <param name="/use_sim_time" value="true"/>
-  <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
-    <param name="delta" value="0.01"/>
-    <param name="xmin" value="-20"/>
-    <param name="xmax" value="20"/>
-    <param name="ymin" value="-20"/>
-    <param name="ymax" value="20"/>
-    <remap from="scan" to="mybot/laser/scan"/>
-    <param name="base_frame" value="chassis" />
-    <param name="minimumScore" value="100"/>
-    <param name="linearUpdate" value="0.3"/>
-    <param name="angularUpdate" value="0.2"/>
-    <param name="map_update_interval" value="0.1"/>
-    <param name="particles" value="50"/>
-  </node>
-	
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find navigation_stack)/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find navigation_stack)/costmap_common_params.yaml" command="load" ns="local_costmap" />
@@ -31,4 +8,5 @@
     <rosparam file="$(find navigation_stack)/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find navigation_stack)/base_local_planner_params.yaml" command="load" />
   </node>
+
 </launch>
