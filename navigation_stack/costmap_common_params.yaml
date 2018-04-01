@@ -7,5 +7,3 @@ inflation_radius: 0.55
 observation_sources: gazebo 
 
 gazebo: {sensor_frame: hokuyo, data_type: LaserScan, topic: mybot/laser/scan, marking: true, clearing: true}
-
-
