@@ -7,6 +7,7 @@
     <rosparam file="local_costmap_params.yaml" command="load" />
     <rosparam file="global_costmap_params.yaml" command="load" />
     <rosparam file="base_local_planner_params.yaml" command="load" />
+    <rosparam file="base_global_params.yaml" command="load" />
   </node>
 
 </launch>
