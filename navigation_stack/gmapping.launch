@@ -10,7 +10,7 @@
     <param name="ymin" value="-120"/>
     <param name="ymax" value="120"/>
     <remap from="scan" to="mybot/laser/scan"/>
-    <param name="base_frame" value="chassis" />
+    <param name="base_frame" value="base_link" />
     <param name="minimumScore" value="50"/>
     <param name="linearUpdate" value="0.1"/>
     <param name="angularUpdate" value="0.1"/>
